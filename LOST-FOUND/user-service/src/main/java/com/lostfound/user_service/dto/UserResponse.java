@@ -1,0 +1,22 @@
+package com.lostfound.user_service.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserResponse {
+
+//    public UserResponse(Long id, String name, String email, String phone, String role) {
+//    }
+
+    private Long id;
+    private String name;
+    private String email;
+    private String phone;
+    private String role;
+
+
+}
