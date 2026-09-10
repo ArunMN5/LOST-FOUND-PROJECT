@@ -1,5 +1,6 @@
 package com.lostfound.lost_item_service.serviceImpl;
 
+import com.lostfound.lost_item_service.Client.UserClient;
 import com.lostfound.lost_item_service.dto.LostItemRequest;
 import com.lostfound.lost_item_service.dto.LostItemResponse;
 import com.lostfound.lost_item_service.dto.Response;
@@ -9,7 +10,9 @@ import com.lostfound.lost_item_service.service.LostItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-
+import com.lostfound.lost_item_service.Client.UserClient;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,10 +20,16 @@ import java.util.List;
 @RequiredArgsConstructor
 public class LostItemServiceImpl implements LostItemService {
 
+    private final UserClient userClient;
     private final LostItemRepository lostItemRepository;
 
     @Override
     public Response addLostItem(LostItemRequest request) {
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String token = authentication.getCredentials().toString();
+        Response userResponse = userClient.getProfile(token);
+
 
         LostItem lostItem = new LostItem();
 
