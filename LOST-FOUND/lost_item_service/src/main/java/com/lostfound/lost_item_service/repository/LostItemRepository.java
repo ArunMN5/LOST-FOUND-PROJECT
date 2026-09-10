@@ -1,4 +1,9 @@
 package com.lostfound.lost_item_service.repository;
 
-public class LostItemRepository {
+import com.lostfound.lost_item_service.entity.LostItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LostItemRepository extends JpaRepository<LostItem, Long> {
+
+
 }

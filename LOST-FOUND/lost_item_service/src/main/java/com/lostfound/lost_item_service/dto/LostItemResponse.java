@@ -1,35 +1,24 @@
-package com.lostfound.lost_item_service.entity;
+package com.lostfound.lost_item_service.dto;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.lostfound.lost_item_service.enums.LostItemStatus;
+import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "lost_items")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class LostItem {
+public class LostItemResponse {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String itemName;
-
     private String description;
-
     private String category;
-
     private String location;
-
     private LocalDate lostDate;
-
     private String status;
-
     private Long userId;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
-
