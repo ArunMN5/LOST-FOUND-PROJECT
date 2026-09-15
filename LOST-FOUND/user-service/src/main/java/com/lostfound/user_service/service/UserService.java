@@ -19,4 +19,5 @@ public interface UserService {
     Response updateUser(Long id, RegisterRequest request);
 
     Response deleteUser(Long id);
+
 }

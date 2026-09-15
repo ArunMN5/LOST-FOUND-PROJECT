@@ -15,9 +15,11 @@ public class LostItemController {
     private final LostItemService lostItemService;
 
     @PostMapping("/add")
-    public ResponseEntity<Response> addLostItem(@RequestBody LostItemRequest request) {
+    public ResponseEntity<Response> addLostItem(
+            @RequestBody LostItemRequest request) {
 
-        Response response = lostItemService.addLostItem(request);
+        Response response =
+                lostItemService.addLostItem(request);
 
         return new ResponseEntity<>(
                 response,
@@ -26,9 +28,11 @@ public class LostItemController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Response> getLostItemById(@PathVariable Long id) {
+    public ResponseEntity<Response> getLostItemById(
+            @PathVariable Long id) {
 
-        Response response = lostItemService.getLostItemById(id);
+        Response response =
+                lostItemService.getLostItemById(id);
 
         return new ResponseEntity<>(
                 response,
@@ -39,7 +43,8 @@ public class LostItemController {
     @GetMapping("/all")
     public ResponseEntity<Response> getAllLostItems() {
 
-        Response response = lostItemService.getAllLostItems();
+        Response response =
+                lostItemService.getAllLostItems();
 
         return new ResponseEntity<>(
                 response,
@@ -52,7 +57,8 @@ public class LostItemController {
             @PathVariable Long id,
             @RequestBody LostItemRequest request) {
 
-        Response response = lostItemService.updateLostItem(id, request);
+        Response response =
+                lostItemService.updateLostItem(id, request);
 
         return new ResponseEntity<>(
                 response,
@@ -61,13 +67,25 @@ public class LostItemController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Response> deleteLostItem(@PathVariable Long id) {
+    public ResponseEntity<Response> deleteLostItem(
+            @PathVariable Long id) {
 
-        Response response = lostItemService.deleteLostItem(id);
+        Response response =
+                lostItemService.deleteLostItem(id);
 
         return new ResponseEntity<>(
                 response,
                 response.getHttpStatus()
         );
     }
+
+
+    @GetMapping("/{id}/matches")
+    public ResponseEntity<Response> findMatches(@PathVariable Long id) {
+
+        Response response = lostItemService.findMatches(id);
+
+        return new ResponseEntity<>(response, response.getHttpStatus());
+    }
+
 }

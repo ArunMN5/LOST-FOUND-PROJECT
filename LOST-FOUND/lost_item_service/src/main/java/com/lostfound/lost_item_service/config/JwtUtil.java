@@ -1,4 +1,4 @@
-package com.lostfound.user_service.config;
+package com.lostfound.lost_item_service.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -20,31 +20,16 @@ public class JwtUtil {
             SECRET_KEY.getBytes(StandardCharsets.UTF_8)
     );
 
-    // Generate JWT with email and role
-    public String generateToken(String email, String role) {
-
-        return Jwts.builder()
-                .setSubject(email)
-                .claim("role", role)
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
-                .signWith(key, SignatureAlgorithm.HS256)
-                .compact();
-    }
-
-    // Get email from JWT
     public String extractUsername(String token) {
 
         return getClaims(token).getSubject();
     }
 
-    // Get role from JWT
     public String extractRole(String token) {
 
         return getClaims(token).get("role", String.class);
     }
 
-    // Validate JWT
     public boolean validateToken(
             String token,
             String email) {

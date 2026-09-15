@@ -1,4 +1,4 @@
-package com.lostfound.lost_item_service.config;
+package com.lostfound.found_item_service.client;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,4 +14,3 @@ public class RestClientConfig {
                 .build();
     }
 }
-

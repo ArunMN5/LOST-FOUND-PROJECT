@@ -1,4 +1,4 @@
-package com.lostfound.user_service.config;
+package com.lostfound.lost_item_service.config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -29,13 +29,14 @@ public class JwtFilter extends OncePerRequestFilter {
             FilterChain filterChain)
             throws ServletException, IOException {
 
-        String authHeader = request.getHeader("Authorization");
+        String authHeader =
+                request.getHeader("Authorization");
 
         String email = null;
         String token = null;
 
-        // Check Bearer token
-        if (authHeader != null && authHeader.startsWith("Bearer ")) {
+        if (authHeader != null &&
+                authHeader.startsWith("Bearer ")) {
 
             token = authHeader.substring(7);
 
@@ -49,9 +50,8 @@ public class JwtFilter extends OncePerRequestFilter {
             }
         }
 
-        // Validate token
-        if (email != null &&
-                SecurityContextHolder.getContext().getAuthentication() == null) {
+        if (email != null && SecurityContextHolder.getContext()
+                        .getAuthentication() == null) {
 
             try {
 
@@ -59,15 +59,15 @@ public class JwtFilter extends OncePerRequestFilter {
 
                     String role = jwtUtil.extractRole(token);
 
+                    System.out.println("JWT EMAIL = " + email);
+                    System.out.println("JWT ROLE = " + role);
+
                     UsernamePasswordAuthenticationToken authentication =
-                            new UsernamePasswordAuthenticationToken(
-                                    email, null,
+                            new UsernamePasswordAuthenticationToken(email,token,
                                     Collections.singletonList(
                                             new SimpleGrantedAuthority("ROLE_" + role)));
 
-                    SecurityContextHolder
-                            .getContext()
-                            .setAuthentication(authentication);
+                    SecurityContextHolder.getContext().setAuthentication(authentication);
                 }
 
             } catch (Exception e) {

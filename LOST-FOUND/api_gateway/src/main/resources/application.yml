@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: api_gateway
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: user-service
+              uri: http://localhost:8081
+              predicates:
+                - Path=/user/**
+
+            - id: lost-item-service
+              uri: http://localhost:8082
+              predicates:
+                - Path=/lost/**
+
+            - id: found-item-service
+              uri: http://localhost:8083
+              predicates:
+                - Path=/found/**
+
+server:
+  port: 8080
+
+#spring.application.name=api_gateway
+#
+#server.port=8080
+#
+#spring.cloud.gateway.routes[0].id=user-service
+#spring.cloud.gateway.routes[0].uri=http://localhost:8081
+#spring.cloud.gateway.routes[0].predicates[0]=Path=/user/**
+#
+#spring.cloud.gateway.routes[1].id=lost-item-service
+#spring.cloud.gateway.routes[1].uri=http://localhost:8082
+#spring.cloud.gateway.routes[1].predicates[0]=Path=/lost/**
+#
+#spring.cloud.gateway.routes[2].id=found-item-service
+#spring.cloud.gateway.routes[2].uri=http://localhost:8083
+#spring.cloud.gateway.routes[2].predicates[0]=Path=/found/**

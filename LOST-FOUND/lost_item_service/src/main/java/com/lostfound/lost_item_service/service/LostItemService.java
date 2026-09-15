@@ -15,4 +15,6 @@ public interface LostItemService {
     Response updateLostItem(Long id, LostItemRequest request);
 
     Response deleteLostItem(Long id);
+
+    Response findMatches(Long lostItemId);
 }
