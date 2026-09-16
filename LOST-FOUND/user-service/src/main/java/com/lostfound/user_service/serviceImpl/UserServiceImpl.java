@@ -25,7 +25,6 @@ public class UserServiceImpl implements UserService {
 
         // Check whether email already exists
         if (userRepository.findByEmail(request.getEmail()).isPresent()) {
-
             return new Response("Email already registered", false, HttpStatus.CONFLICT, null);
         }
 
@@ -52,8 +51,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Response login(LoginRequest request) {
 
-        User user = userRepository.findByEmail(request.getEmail())
-                .orElse(null);
+        User user = userRepository.findByEmail(request.getEmail()).orElse(null);
 
         if (user == null) {
             return new Response("Invalid email or password", false, HttpStatus.UNAUTHORIZED, null);
@@ -103,7 +101,6 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findById(id).orElse(null);
 
         if (user == null) {
-
             return new Response("User not found", false, HttpStatus.NOT_FOUND, null);
         }
 

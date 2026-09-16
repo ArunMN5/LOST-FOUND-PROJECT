@@ -35,9 +35,7 @@ public class FoundItemController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Response> updateFoundItem(
-            @PathVariable Long id,
-            @RequestBody FoundItemRequest request) {
+    public ResponseEntity<Response> updateFoundItem(@PathVariable Long id, @RequestBody FoundItemRequest request) {
 
         Response response = foundItemService.updateFoundItem(id, request);
         return new ResponseEntity<>(response, response.getHttpStatus());
