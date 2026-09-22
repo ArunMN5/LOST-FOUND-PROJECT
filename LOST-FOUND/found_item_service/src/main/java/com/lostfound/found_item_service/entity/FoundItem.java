@@ -31,4 +31,7 @@ public class FoundItem {
     private String status;
 
     private Long userId;
+
+    private String imageUrl;
+    private String imagePublicId;
 }

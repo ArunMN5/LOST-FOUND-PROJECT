@@ -1,0 +1,28 @@
+
+> lost-found-frontend@1.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m326[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m10:37:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Claims/Claims.jsx[22m
+[2m10:38:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Matches/Matches.jsx[22m
+[2m10:39:06 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Matches/Matches.jsx[22m
+[2m10:39:16 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Matches/Matches.jsx[22m
+[2m10:39:29 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Matches/Matches.jsx[22m
+[2m10:40:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Matches/Matches.css[22m
+[2m10:40:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Matches/Matches.css[22m
+[2m10:41:07 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Matches/Matches.css[22m
+[2m10:42:02 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Claims/Claims.css[22m
+[2m12:31:52 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/LostItems/LostItems.jsx[22m
+[2m12:32:02 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/LostItemDetails/LostItemDetails.jsx, /@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Matches/Matches.jsx, /@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/LostItems/LostItems.jsx, /@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/AddLostItem/AddLostItem.jsx, /@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/SearchItems/SearchItems.jsx, /@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Dashboard/Dashboard.jsx, /@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/AdminDashboard/AdminDashboard.jsx, /@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/Claims/Claims.jsx[22m
+[2m12:34:26 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/components/ItemCard/ItemCard.jsx[22m
+[2m12:48:18 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/SearchItems/SearchItems.jsx[22m
+[2m12:48:30 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/SearchItems/SearchItems.jsx[22m
+[2m12:48:38 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/SearchItems/SearchItems.jsx[22m
+[2m12:48:43 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/SearchItems/SearchItems.jsx[22m
+[2m12:48:48 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/C:/Users/arun.m/Desktop/LOST-FOUND-PROJECT/frontend/src/pages/SearchItems/SearchItems.jsx[22m
+
+c:\Users\arun.m\Desktop\LOST-FOUND-PROJECT\frontend>

@@ -31,5 +31,10 @@ public class LostItem {
     private String status;
 
     private Long userId;
+
+
+    private String imageUrl;
+
+    private String imagePublicId;
 }
 

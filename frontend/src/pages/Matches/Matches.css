@@ -1,0 +1,243 @@
+.matches-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.matches-header {
+  margin-bottom: 1.5rem;
+}
+
+.matches-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.match-tab {
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--gray-600);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.match-tab:hover {
+  background-color: var(--gray-100);
+  color: var(--gray-900);
+}
+
+.match-tab.active {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.matches-list {
+  overflow: hidden;
+}
+
+.match-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--gray-100);
+  transition: background-color 0.15s ease;
+}
+
+.match-list-item:last-child {
+  border-bottom: none;
+}
+
+.match-list-item:hover {
+  background-color: var(--gray-50);
+}
+
+.match-list-image {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius);
+  background-color: var(--gray-100);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.match-list-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.match-list-no-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+  font-size: 0.75rem;
+}
+
+.match-list-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.match-list-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.375rem;
+}
+
+.match-list-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.match-list-meta {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin: 0;
+}
+
+.match-list-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.match-claim-status {
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+  text-align: center;
+  padding: 0.375rem 0;
+}
+
+.match-claim-status strong {
+  color: var(--gray-900);
+  font-weight: 700;
+}
+
+.match-list-score {
+  flex-shrink: 0;
+}
+
+.match-score-ring {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: conic-gradient(var(--success) var(--score), var(--gray-200) 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.match-score-ring::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.match-score-ring span {
+  position: relative;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+@media (max-width: 640px) {
+  .match-list-item {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .match-list-score {
+    order: 1;
+  }
+
+  .match-list-actions {
+    width: 100%;
+    order: 2;
+    flex-direction: row;
+  }
+
+  .match-list-actions .btn {
+    flex: 1;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--gray-500);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--gray-900);
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-subtitle {
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--gray-100);
+  background-color: var(--gray-50);
+}

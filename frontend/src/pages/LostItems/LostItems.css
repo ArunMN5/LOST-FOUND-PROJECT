@@ -1,0 +1,24 @@
+.page-header .back-button {
+  margin-bottom: 0.75rem;
+}
+
+.items-grid {
+  margin-top: 1.5rem;
+}
+
+.empty-state {
+  max-width: 480px;
+  margin: 2rem auto;
+}
+
+.empty-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.empty-description {
+  color: var(--gray-600);
+  margin-bottom: 1.25rem;
+}

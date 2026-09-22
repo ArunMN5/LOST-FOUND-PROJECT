@@ -1,0 +1,180 @@
+.admin-dashboard-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-header {
+  margin-bottom: 1.5rem;
+}
+
+.admin-stats-grid {
+  margin-bottom: 1.5rem;
+}
+
+.admin-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background-color: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.admin-stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-stat-primary .admin-stat-icon {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.admin-stat-success .admin-stat-icon {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.admin-stat-warning .admin-stat-icon {
+  background-color: var(--warning-light);
+  color: var(--warning);
+}
+
+.admin-stat-info .admin-stat-icon {
+  background-color: var(--info-light);
+  color: var(--info);
+}
+
+.admin-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-stat-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  line-height: 1;
+}
+
+.admin-stat-label {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-top: 0.25rem;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.admin-tab {
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--gray-600);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.admin-tab:hover {
+  background-color: var(--gray-100);
+  color: var(--gray-900);
+}
+
+.admin-tab.active {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.admin-content {
+  overflow: hidden;
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-100);
+  white-space: nowrap;
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: var(--gray-500);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background-color: var(--gray-50);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tbody tr:hover {
+  background-color: var(--gray-50);
+}
+
+.admin-table-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+.admin-thumb-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  background-color: var(--gray-100);
+  color: var(--gray-400);
+  font-size: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.admin-table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

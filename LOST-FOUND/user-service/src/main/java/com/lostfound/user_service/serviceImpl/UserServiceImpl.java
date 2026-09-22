@@ -149,4 +149,29 @@ public class UserServiceImpl implements UserService {
         return new Response("User deleted successfully", true, HttpStatus.OK, null);
     }
 
+    @Override
+    public Response updateProfile(String email, RegisterRequest request) {
+
+        User user = userRepository.findByEmail(email).orElse(null);
+
+        if (user == null) {
+            return new Response("User not found", false, HttpStatus.NOT_FOUND, null);
+        }
+
+        // Prevent email conflict with another user
+        if (!user.getEmail().equals(request.getEmail()) &&
+                userRepository.findByEmail(request.getEmail()).isPresent()) {
+            return new Response("Email already in use", false, HttpStatus.CONFLICT, null);
+        }
+
+        user.setName(request.getName());
+        user.setEmail(request.getEmail());
+        user.setPhone(request.getPhone());
+
+        User updatedUser = userRepository.save(user);
+        updatedUser.setPassword(null);
+
+        return new Response("Profile updated successfully", true, HttpStatus.OK, updatedUser);
+    }
+
 }

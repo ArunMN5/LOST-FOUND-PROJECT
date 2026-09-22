@@ -1,8 +1,9 @@
 package com.lostfound.lost_item_service.service;
-
+import java.util.List;
 import com.lostfound.lost_item_service.dto.LostItemRequest;
 import com.lostfound.lost_item_service.dto.LostItemResponse;
 import com.lostfound.lost_item_service.dto.Response;
+import com.lostfound.lost_item_service.entity.LostItem;
 
 public interface LostItemService {
 
@@ -16,5 +17,7 @@ public interface LostItemService {
 
     Response deleteLostItem(Long id);
 
-    Response findMatches(Long lostItemId);
+    List<LostItem> getByUserId(Long userId);
+
+    //Response findMatches(Long lostItemId);
 }

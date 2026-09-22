@@ -1,0 +1,5 @@
+.register-page .auth-hero {
+  background:
+    linear-gradient(135deg, rgba(15, 39, 68, 0.92) 0%, rgba(22, 163, 74, 0.8) 100%),
+    url('https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+}

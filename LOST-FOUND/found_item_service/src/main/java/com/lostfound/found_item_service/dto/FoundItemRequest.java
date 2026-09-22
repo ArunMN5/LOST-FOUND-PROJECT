@@ -3,6 +3,7 @@ package com.lostfound.found_item_service.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 
@@ -22,4 +23,6 @@ public class FoundItemRequest {
     private LocalDate foundDate;
 
     private Long userId;
+
+    private MultipartFile image;
 }

@@ -2,9 +2,14 @@ package com.lostfound.found_item_service.controller;
 
 import com.lostfound.found_item_service.dto.FoundItemRequest;
 import com.lostfound.found_item_service.dto.Response;
+import com.lostfound.found_item_service.entity.FoundItem;
 import com.lostfound.found_item_service.service.FoundItemService;
+
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/found")
@@ -17,7 +22,7 @@ public class FoundItemController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Response> addFoundItem(@RequestBody FoundItemRequest request) {
+    public ResponseEntity<Response> addFoundItem(@ModelAttribute  FoundItemRequest request) {
         Response response = foundItemService.addFoundItem(request);
         return new ResponseEntity<>(response, response.getHttpStatus());
     }
@@ -35,7 +40,7 @@ public class FoundItemController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Response> updateFoundItem(@PathVariable Long id, @RequestBody FoundItemRequest request) {
+    public ResponseEntity<Response> updateFoundItem(@PathVariable Long id, @ModelAttribute  FoundItemRequest request) {
 
         Response response = foundItemService.updateFoundItem(id, request);
         return new ResponseEntity<>(response, response.getHttpStatus());
@@ -46,4 +51,22 @@ public class FoundItemController {
         Response response = foundItemService.deleteFoundItem(id);
         return new ResponseEntity<>(response, response.getHttpStatus());
     }
+
+    @GetMapping("/match/{lostItemId}")
+    public ResponseEntity<Response> findMatchingItems(@PathVariable Long lostItemId) {
+
+        Response response = foundItemService.findMatchingItems(lostItemId);
+        return new ResponseEntity<>(response, response.getHttpStatus());
+    }
+
+
+    @GetMapping("/user/{userId}")
+public ResponseEntity<Response> getByUserId(@PathVariable Long userId) {
+
+    List<FoundItem> foundItems = foundItemService.getByUserId(userId);
+    Response response = new Response( "Found items fetched successfully",true,HttpStatus.OK,foundItems);
+
+    return new ResponseEntity<>(response, response.getHttpStatus());
+}
+
 }

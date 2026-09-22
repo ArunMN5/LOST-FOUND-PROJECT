@@ -60,6 +60,16 @@ public class UserController {
         return new ResponseEntity<>(response, response.getHttpStatus());
     }
 
+    @PutMapping("/profile")
+    public ResponseEntity<Response> updateProfile(
+            Authentication authentication,
+            @RequestBody RegisterRequest request) {
+
+        String email = authentication.getName();
+        Response response = userService.updateProfile(email, request);
+        return new ResponseEntity<>(response, response.getHttpStatus());
+    }
+
     @PutMapping("/admin/{id}")
     public ResponseEntity<Response> updateUser(@PathVariable Long id, @RequestBody RegisterRequest request) {
 

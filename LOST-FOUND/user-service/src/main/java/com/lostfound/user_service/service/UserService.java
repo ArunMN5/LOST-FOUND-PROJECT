@@ -20,4 +20,5 @@ public interface UserService {
 
     Response deleteUser(Long id);
 
+    Response updateProfile(String email, RegisterRequest request);
 }
